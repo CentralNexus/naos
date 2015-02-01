@@ -1,0 +1,10 @@
+naos:
+  image: centralnexus/naos
+  command: python manage.py runserver
+  links:
+   - db
+  ports:
+   - "1462:80"
+
+db:
+  image: postgres
